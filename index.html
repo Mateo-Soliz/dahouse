@@ -38,12 +38,12 @@
         </div>
         <nav class="canvas-menu mobile-menu">
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#">Sobre nosotros</a></li>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./sobre-nosotros.html">Sobre nosotros</a></li>
                 <li><a href="#">Gimnasio</a></li>
                 <li><a href="#">DaHouse Dance</a></li>
-                <li><a href="shoop.html">DaHouse Shop</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">DaHouse Shop</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -69,12 +69,12 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
-                            <li class="active"><a href="index.html">Inicio</a></li>
-                            <li><a href="#">Sobre nosotros</a></li>
-                            <li><a href="#">Crossfit</a></li>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./sobre-nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="#">Gimnasio</a></li>
                             <li><a href="#">DaHouse Dance</a></li>
-                            <li><a href="shoop.html">DaHouse Shop</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="#">DaHouse Shop</a></li>
+                            <li><a href="#">Contacto</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -105,7 +105,7 @@
                             <div class="hi-text">
                                 <span>CROSSFIT EN MALLORCA</span>
                                 <h1>Disfruta <strong>entrenando</strong> en tu limite</h1>
-                                <a href="#" class="primary-btn">Reserva una clase gratuita</a>
+                                <a href="#clase-gratuita" class="primary-btn">Reserva una clase gratuita</a>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,282 @@
             </div>
         </div>
     </section>
-    <!-- Home Seccion Acaba -->
+    <!-- Home Sección Acaba -->
+
+    <!-- Sistema de reservas -->
+    <link rel="stylesheet" href="./css/calendario-reservas.css">
+    <script>
+        var semana_actual = ['2024-12-02', '2024-12-08'];
+    </script>
+    <div id="clase-gratuita" class="choseus-section">
+        <div class="section-title">
+            <br><br>
+            <span>¿ESTAS PREPARADO?</span>
+            <h2>¡Prueba un dia gratuito sin compromiso!</h2>
+        </div>
+    </div>
+    <div class="contenedor-principal">
+        <!--Botones cambia 3 Dias responsive-->
+        <a class="boton_movil" onclick="SiguienteDia()">></a>
+        <div class="columna-izquierda">
+            <div class="div-calendario">
+                <div class="caja">
+                <button class="boton-camb-sem" onclick="obtener_proxima_semana(semana_actual[0], semana_actual[1], false)" type="button">&lt;</button><button class="boton-camb-sem" onclick="obtener_proxima_semana(semana_actual[0], semana_actual[1])" type="button">></button> <span id="mes">MES</span> <span id="año">AÑO</span> <span id="semana">SEMANA x</span>
+                </div>
+                <table>
+                    <tr class="horario">
+                        <th>HORARIO</th>
+                        <th>LUNES</th>
+                        <th>MARTES</th>
+                        <th>MIÉRCOLES</th>
+                        <th>JUEVES</th>
+                        <th>VIERNES</th>
+                        <th>SÁBADO</th>
+                        <th>DOMINGO</th>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">5:00</td>
+                        <td hora="5:00" dia="lunes"></td>
+                        <td hora="5:00" dia="martes"></td>
+                        <td hora="5:00" dia="miercoles"></td>
+                        <td hora="5:00" dia="jueves"></td>
+                        <td hora="5:00" dia="viernes"></td>
+                        <td hora="5:00" dia="sabado"></td>
+                        <td hora="5:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">6:00</td>
+                        <td hora="6:00" dia="lunes"></td>
+                        <td hora="6:00" dia="martes">💃 Danza</td>
+                        <td hora="6:00" dia="miercoles">💪 Gimnasio</td>
+                        <td hora="6:00" dia="jueves">💪 Gimnasio</td>
+                        <td hora="6:00" dia="viernes">🧘🏻‍♀️ Pilates</td>
+                        <td hora="6:00" dia="sabado">🧘🏻‍♀️ Pilates</td>
+                        <td hora="6:00" dia="domingo">🧘🏻‍♀️ Pilates</td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">7:00</td>
+                        <td hora="7:00" dia="lunes" class="bloqueado">Sin plazas</td>
+                        <td hora="7:00" dia="martes" class="bloqueado">Sin plazas</td>
+                        <td hora="7:00" dia="miercoles" class="bloqueado">Sin plazas</td>
+                        <td hora="7:00" dia="jueves" class="bloqueado">Sin plazas</td>
+                        <td hora="7:00" dia="viernes" class="bloqueado">Sin plazas</td>
+                        <td hora="7:00" dia="sabado" class="bloqueado">Sin plazas</td>
+                        <td hora="7:00" dia="domingo" class="bloqueado">Sin plazas</td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">8:00</td>
+                        <td hora="8:00" dia="lunes"></td>
+                        <td hora="8:00" dia="martes"></td>
+                        <td hora="8:00" dia="miercoles"></td>
+                        <td hora="8:00" dia="jueves"></td>
+                        <td hora="8:00" dia="viernes"></td>
+                        <td hora="8:00" dia="sabado"></td>
+                        <td hora="8:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">9:00</td>
+                        <td hora="9:00" dia="lunes"></td>
+                        <td hora="9:00" dia="martes"></td>
+                        <td hora="9:00" dia="miercoles"></td>
+                        <td hora="9:00" dia="jueves"></td>
+                        <td hora="9:00" dia="viernes"></td>
+                        <td hora="9:00" dia="sabado"></td>
+                        <td hora="9:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">10:00</td>
+                        <td hora="10:00" dia="lunes"></td>
+                        <td hora="10:00" dia="martes"></td>
+                        <td hora="10:00" dia="miercoles"></td>
+                        <td hora="10:00" dia="jueves"></td>
+                        <td hora="10:00" dia="viernes"></td>
+                        <td hora="10:00" dia="sabado"></td>
+                        <td hora="10:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">11:00</td>
+                        <td hora="11:00" dia="lunes"></td>
+                        <td hora="11:00" dia="martes"></td>
+                        <td hora="11:00" dia="miercoles"></td>
+                        <td hora="11:00" dia="jueves"></td>
+                        <td hora="11:00" dia="viernes"></td>
+                        <td hora="11:00" dia="sabado"></td>
+                        <td hora="11:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">12:00</td>
+                        <td hora="12:00" dia="lunes"></td>
+                        <td hora="12:00" dia="martes"></td>
+                        <td hora="12:00" dia="miercoles"></td>
+                        <td hora="12:00" dia="jueves"></td>
+                        <td hora="12:00" dia="viernes"></td>
+                        <td hora="12:00" dia="sabado"></td>
+                        <td hora="12:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">13:00</td>
+                        <td hora="13:00" dia="lunes"></td>
+                        <td hora="13:00" dia="martes"></td>
+                        <td hora="13:00" dia="miercoles"></td>
+                        <td hora="13:00" dia="jueves"></td>
+                        <td hora="13:00" dia="viernes"></td>
+                        <td hora="13:00" dia="sabado"></td>
+                        <td hora="13:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">14:00</td>
+                        <td hora="14:00" dia="lunes"></td>
+                        <td hora="14:00" dia="martes"></td>
+                        <td hora="14:00" dia="miercoles"></td>
+                        <td hora="14:00" dia="jueves"></td>
+                        <td hora="14:00" dia="viernes"></td>
+                        <td hora="14:00" dia="sabado"></td>
+                        <td hora="14:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">15:00</td>
+                        <td hora="15:00" dia="lunes"></td>
+                        <td hora="15:00" dia="martes"></td>
+                        <td hora="15:00" dia="miercoles"></td>
+                        <td hora="15:00" dia="jueves"></td>
+                        <td hora="15:00" dia="viernes"></td>
+                        <td hora="15:00" dia="sabado"></td>
+                        <td hora="15:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">16:00</td>
+                        <td hora="16:00" dia="lunes"></td>
+                        <td hora="16:00" dia="martes"></td>
+                        <td hora="16:00" dia="miercoles"></td>
+                        <td hora="16:00" dia="jueves"></td>
+                        <td hora="16:00" dia="viernes"></td>
+                        <td hora="16:00" dia="sabado"></td>
+                        <td hora="16:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">17:00</td>
+                        <td hora="17:00" dia="lunes"></td>
+                        <td hora="17:00" dia="martes"></td>
+                        <td hora="17:00" dia="miercoles"></td>
+                        <td hora="17:00" dia="jueves"></td>
+                        <td hora="17:00" dia="viernes"></td>
+                        <td hora="17:00" dia="sabado"></td>
+                        <td hora="17:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">18:00</td>
+                        <td hora="18:00" dia="lunes"></td>
+                        <td hora="18:00" dia="martes"></td>
+                        <td hora="18:00" dia="miercoles"></td>
+                        <td hora="18:00" dia="jueves"></td>
+                        <td hora="18:00" dia="viernes"></td>
+                        <td hora="18:00" dia="sabado"></td>
+                        <td hora="18:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">19:00</td>
+                        <td hora="19:00" dia="lunes"></td>
+                        <td hora="19:00" dia="martes"></td>
+                        <td hora="19:00" dia="miercoles"></td>
+                        <td hora="19:00" dia="jueves"></td>
+                        <td hora="19:00" dia="viernes"></td>
+                        <td hora="19:00" dia="sabado"></td>
+                        <td hora="19:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">20:00</td>
+                        <td hora="20:00" dia="lunes"></td>
+                        <td hora="20:00" dia="martes"></td>
+                        <td hora="20:00" dia="miercoles"></td>
+                        <td hora="20:00" dia="jueves"></td>
+                        <td hora="20:00" dia="viernes"></td>
+                        <td hora="20:00" dia="sabado"></td>
+                        <td hora="20:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">21:00</td>
+                        <td hora="21:00" dia="lunes"></td>
+                        <td hora="21:00" dia="martes"></td>
+                        <td hora="21:00" dia="miercoles"></td>
+                        <td hora="21:00" dia="jueves"></td>
+                        <td hora="21:00" dia="viernes"></td>
+                        <td hora="21:00" dia="sabado"></td>
+                        <td hora="21:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">22:00</td>
+                        <td hora="22:00" dia="lunes"></td>
+                        <td hora="22:00" dia="martes"></td>
+                        <td hora="22:00" dia="miercoles"></td>
+                        <td hora="22:00" dia="jueves"></td>
+                        <td hora="22:00" dia="viernes"></td>
+                        <td hora="22:00" dia="sabado"></td>
+                        <td hora="22:00" dia="domingo"></td>
+                    </tr>
+                    <tr>
+                        <td class="pequeño hora">23:00</td>
+                        <td hora="23:00" dia="lunes"></td>
+                        <td hora="23:00" dia="martes"></td>
+                        <td hora="23:00" dia="miercoles"></td>
+                        <td hora="23:00" dia="jueves"></td>
+                        <td hora="23:00" dia="viernes"></td>
+                        <td hora="23:00" dia="sabado"></td>
+                        <td hora="23:00" dia="domingo"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="columna-derecha">
+            <div class="carrito-reservas">
+                <h3 class="titulo-carrito">HORAS RESERVADAS</h3>
+                <ul id="ul-reservas">
+                    <!-- Aquí puedes agregar los elementos de la lista de reservas -->
+                </ul>
+                <div class="carrito-abajo">
+                    <div class="carrito-izq">
+                        <p id="total-reservas">Total reservas</p>
+                        <!-- No cambia nada aquí -->
+                    </div>
+                    <div class="carrito-der">
+                        <p id="valor-reservas">0€</p>
+                        <!-- No cambia nada aquí -->
+                    </div>
+                </div>
+                <div class="botones-reserva">
+                    <button id="btn-cancelar" onclick="VaciarCarrito()">Cancelar</button>
+                    <button id="btn-reservar" onclick="ComprobarCorreo()">Reservar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Bootstrap -->
+    <div class="modal fade" id="correo_modal" tabindex="-1" aria-labelledby="correo_modal_label" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="correo_modal_label">Introduce tu correo</h5>
+            </div>
+            <div class="modal-body">
+            <form id="correo_form">
+                <div class="mb-3">
+                <label for="correo_input" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo_input" placeholder="correo@gmail.com" required>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="CerrarModalEmail()">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="GuardarCorreo()">Guardar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="./js/sesion.js"></script>
+    <script src="./js/horarios.js"></script>
+    <script src="./js/calendario.js"></script>
 
     <!-- Porque nosotros Empieza -->
     <section class="choseus-section spad">
@@ -274,6 +549,8 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+
 
 </body>
 

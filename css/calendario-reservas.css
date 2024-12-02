@@ -1,0 +1,337 @@
+.margin {
+    margin: 20px;
+}
+
+h2.titulo-reservar, h4.titulo-reservar {
+    text-align: center;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Estilos del calendario */
+.div-calendario {
+    background-color: #08b790;
+    padding: 10px;
+    border-radius: 3px;
+    border: 3px solid #08b790;
+    overflow-x: auto;
+}
+
+.div-calendario table {
+    width: 100%;
+    table-layout: fixed;
+    border: 2px solid #b6cffb;
+    border-collapse: collapse;
+}
+
+.div-calendario th, .div-calendario td {
+    border: 1px solid #b6cffb;
+    text-align: center;
+    padding: 4px; /* Reducir el padding */
+    font-size: 10px; /* Reducir el tamaño de fuente */
+}
+
+.div-calendario th {
+    background-color: #d7e5fd;
+    color: rgba(0, 0, 0, 0.61);
+    font-size: 12px; /* Reducir el tamaño de fuente */
+    font-weight: bold;
+}
+
+.div-calendario td {
+    font-size: 10px; /* Reducir el tamaño de fuente */
+    color: white;
+    word-wrap: break-word; /* Permitir ajuste de línea */
+}
+
+.div-calendario td.pequeño {
+    font-weight: bold;
+}
+
+.div-calendario td[hora] {
+    word-break: break-word;
+}
+
+.ico-barco {
+    width: 20px;
+}
+
+/* Botones de cambio de semana */
+.boton-camb-sem {
+    padding: 5px 10px;
+    color: #7eacfa;
+    background-color: white;
+    font-size: 16px; /* Reducir el tamaño de fuente */
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.boton-camb-sem:first-child {
+    margin-left: 8px;
+}
+
+/* Estilos del carrito */
+.carrito-reservas {
+    background-color: white;
+    border: 2px solid #9bc6bdb7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.titulo-carrito {
+    font-size: 15px; /* Reducir el tamaño de fuente */
+    margin: 0;
+    border-bottom: 2px solid #b6cffb;
+    padding: 10px 0;
+}
+
+#ul-reservas {
+    list-style-type: none;
+    padding: 0;
+    margin: 25px;
+}
+
+#ul-reservas li {
+    font-size: 13px; /* Reducir el tamaño de fuente */
+}
+
+.carrito-abajo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#total-reservas {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.603);
+}
+
+#valor-reservas {
+    font-size: 22px; /* Reducir el tamaño de fuente */
+    text-align: right;
+}
+
+#btn-cancelar, #btn-reservar {
+    padding: 8px 14px; /* Reducir el padding */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-cancelar {
+    background-color: #f75137;
+}
+
+#btn-reservar {
+    background-color: #08b790;
+    width: 120px; /* Reducir el ancho */
+}
+
+.eliminar {
+    background-color: transparent;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    padding: 1px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 7px;
+}
+
+.eliminar:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Estilos para el contenedor principal */
+.contenedor-principal {
+    background-color: #333;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.columna-izquierda, .columna-derecha {
+    flex: 1;
+    margin: 10px;
+}
+
+.columna-izquierda {
+    max-width: calc(70% - 20px);
+}
+
+.columna-derecha {
+    max-width: 30%;
+}
+
+
+@media (max-width: 768px) {
+    h2.titulo-reservar {
+        margin-top: 25px;
+    }
+    
+    .contenedor-principal {
+        flex-direction: column;
+    }
+
+    .columna-izquierda, .columna-derecha {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Estilos específicos para el calendario */
+.disponible {
+    background-color: #08b790;
+}
+
+.reservado, .h23 {
+    background-color: #0dd94a;
+}
+
+.comprar, .comprar2 {
+    background-color: #ffcc5d;
+}
+
+.bloqueado {
+    background-color: #f75137;
+}
+
+/* Estilos para truncar el texto en los encabezados de la tabla */
+.div-calendario th {
+    white-space: nowrap; /* Evitar que el texto se ajuste en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Mostrar "..." al truncar */
+    max-width: 100px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+.hora {
+    background-color: #d7e5fd;
+    color: rgba(0, 0, 0, 0.61) !important;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.h23{
+    background-color: #0dd94a;
+}
+
+.reservado2 {
+    background-color: #faad05e3;
+}
+
+.comprar2 {
+    background-color: #faad05e3;
+}
+
+.caja {
+    border: 2px solid white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    text-align: center;
+}
+
+.boton-camb-sem {
+    background-color: #09a684;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-camb-sem:hover {
+    background-color: #088166;
+}
+
+#mes, #año, #semana {
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+}
+
+th {
+    background-color: #09a684;
+    color: white;
+}
+
+.hora {
+    font-weight: bold;
+}
+
+.botones-reserva {
+    display: flex;
+    justify-content: space-between; /* Alinea los botones a los extremos */
+    margin-top: 10px; /* Espacio opcional entre los botones y el contenido superior */
+}
+
+.boton_movil {
+    display: none;
+}
+
+@media (max-width: 450px) {
+    .boton_movil {
+        border: 0px;
+        box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.644);
+        background-color: white;
+        color: rgba(94, 93, 93, 0.696);
+        border-radius: 50px;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        display: inline-block;
+        position: absolute;
+        left: 90%;
+        top: 50%;
+    }
+
+    #ul-reservas li {
+        font-size: 12px;
+    }
+    
+    @media (max-width: 768px) {
+        .contenedor-principal {
+            flex-direction: column;
+        }
+    
+        .columna-izquierda, .columna-derecha {
+            max-width: 100%;
+            margin: 10px 0;
+            order: 1; /* Cambia el orden de visualización en columnas */
+        }
+    
+        .columna-derecha {
+            order: -1; /* Cambia el orden para que aparezca primero en dispositivos móviles */
+        }
+    }
+
+}
